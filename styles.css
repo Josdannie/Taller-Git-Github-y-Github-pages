@@ -2,33 +2,441 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    }
+
+html {
+scroll-behavior: smooth;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background: #f4f1ea;
-    color: #2d2d2d;
+font-family: Arial, sans-serif;
+background: #f4f1ea;
+color: #202525;
 }
 
-header {
-    text-align: center;
-    padding: 50px 20px;
-    background: #263238;
-    color: white;
+/* ==============================
+PORTADA
+================================ */
+
+.hero {
+min-height: 90vh;
+position: relative;
+color: white;
+
+background:
+    linear-gradient(
+        120deg,
+        rgba(15, 25, 25, 0.88),
+        rgba(15, 25, 25, 0.25)
+    ),
+    url("imagenes/portada.jpg") center / cover;
+
 }
 
-header h1 {
-    font-size: 42px;
-    margin-bottom: 12px;
+/* ==============================
+NAVEGACIÓN
+================================ */
+
+nav {
+width: 90%;
+max-width: 1200px;
+margin: auto;
+padding: 30px 0;
+
+display: flex;
+justify-content: space-between;
+align-items: center;
+
 }
 
-header p {
-    font-size: 18px;
+.logo {
+font-size: 22px;
+font-weight: bold;
+letter-spacing: 1px;
 }
+
+.logo span {
+color: #2a9d8f;
+}
+
+nav a {
+color: white;
+text-decoration: none;
+
+border: 1px solid rgba(255,255,255,0.6);
+padding: 10px 20px;
+border-radius: 30px;
+transition: 0.3s;
+
+}
+
+nav a:hover {
+background: white;
+color: #202525;
+}
+
+/* ==============================
+PORTADA - TEXTO
+================================ */
+
+.hero-content {
+width: 90%;
+max-width: 1200px;
+margin: 110px auto 0;
+}
+
+.eyebrow {
+color: #2a9d8f;
+
+font-size: 12px;
+letter-spacing: 4px;
+font-weight: bold;
+margin-bottom: 20px;
+
+}
+
+.hero h1 {
+font-size: clamp(55px, 9vw, 110px);
+
+line-height: 0.9;
+font-weight: 800;
+text-shadow:
+    0 3px 15px rgba(0,0,0,0.35);
+
+}
+
+/* COLORES DEL TITULO */
+
+.hero h1 .amarillo {
+color: #f4c542;
+}
+
+.hero h1 .azul {
+color: #168aad;
+}
+
+.hero h1 .rojo {
+color: #e63946;
+}
+
+.hero-text {
+max-width: 500px;
+
+margin: 30px 0;
+font-size: 18px;
+line-height: 1.6;
+color: #ffffff;
+text-shadow:
+    0 2px 8px rgba(0,0,0,0.7);
+
+}
+
+.hero-button {
+display: inline-block;
+
+padding: 15px 25px;
+background: #2a9d8f;
+color: white;
+text-decoration: none;
+font-weight: bold;
+border-radius: 30px;
+transition: 0.3s;
+
+}
+
+.hero-button:hover {
+transform: translateY(-3px);
+
+background: #21867a;
+
+}
+
+/* ==============================
+INTRODUCCIÓN
+================================ */
+
+.intro {
+max-width: 850px;
+
+margin: auto;
+padding: 110px 20px 80px;
+text-align: center;
+
+}
+
+.section-label {
+color: #2a9d8f;
+
+font-size: 12px;
+letter-spacing: 4px;
+font-weight: bold;
+margin-bottom: 18px;
+
+}
+
+.intro h2,
+.section-heading h2 {
+font-size: clamp(35px, 5vw, 60px);
+
+line-height: 1;
+margin-bottom: 25px;
+
+}
+
+.intro > p:last-child {
+max-width: 650px;
+
+margin: auto;
+color: #666;
+line-height: 1.7;
+font-size: 17px;
+
+}
+
+/* ==============================
+DESTINOS
+================================ */
+
+.destinos {
+width: 90%;
+
+max-width: 1200px;
+margin: auto;
+padding-bottom: 110px;
+
+}
+
+.section-heading {
+display: flex;
+
+justify-content: space-between;
+align-items: end;
+margin-bottom: 40px;
+
+}
+
+.section-heading > span {
+color: #777;
+
+font-size: 14px;
+
+}
+
+.cards {
+display: grid;
+
+grid-template-columns: repeat(2, 1fr);
+gap: 25px;
+
+}
+
+/* ==============================
+TARJETAS
+================================ */
+
+.card {
+height: 500px;
+
+border-radius: 24px;
+overflow: hidden;
+position: relative;
+background: #333;
+transition: 0.5s;
+box-shadow:
+    0 15px 35px rgba(0,0,0,0.12);
+
+}
+
+.card:hover {
+transform: translateY(-10px);
+}
+
+/* IMAGEN */
+
+.card img {
+width: 100%;
+
+height: 100%;
+object-fit: cover;
+display: block;
+transition: 0.6s;
+
+}
+
+.card:hover img {
+transform: scale(1.07);
+}
+
+/* CAPA OSCURA */
+
+.card::after {
+content: “”;
+
+position: absolute;
+inset: 0;
+background:
+    linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.02) 20%,
+        rgba(0,0,0,0.12) 35%,
+        rgba(0,0,0,0.55) 60%,
+        rgba(0,0,0,0.94) 100%
+    );
+pointer-events: none;
+z-index: 1;
+
+}
+
+/* ==============================
+TEXTO DE TARJETAS
+================================ */
+
+.card-overlay {
+position: absolute;
+
+z-index: 2;
+left: 0;
+right: 0;
+bottom: 0;
+padding: 32px;
+color: white;
+text-shadow:
+    0 2px 8px rgba(0,0,0,0.75);
+
+}
+
+.tag {
+display: inline-block;
+
+font-size: 11px;
+letter-spacing: 2px;
+color: #58c7b9;
+font-weight: bold;
+margin-bottom: 5px;
+
+}
+
+.card h3 {
+font-size: 40px;
+
+margin: 8px 0 12px;
+color: white;
+text-shadow:
+    0 3px 10px rgba(0,0,0,0.8);
+
+}
+
+.card p {
+color: #f1f1f1;
+
+line-height: 1.55;
+margin-bottom: 18px;
+max-width: 500px;
+text-shadow:
+    0 2px 7px rgba(0,0,0,0.85);
+
+}
+
+.card a {
+color: white;
+
+text-decoration: none;
+font-weight: bold;
+transition: 0.3s;
+
+}
+
+.card a:hover {
+color: #58c7b9;
+}
+
+/* ==============================
+FRASE FINAL
+================================ */
+
+.quote {
+min-height: 400px;
+
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+background: #263238;
+color: white;
+padding: 50px 20px;
+
+}
+
+.quote p {
+font-size: clamp(30px, 5vw, 65px);
+
+line-height: 1.1;
+
+}
+
+.quote p:last-child {
+color: #2a9d8f;
+}
+
+/* ==============================
+FOOTER
+================================ */
 
 footer {
-    text-align: center;
+text-align: center;
+
+padding: 60px 20px;
+background: #161d1f;
+color: white;
+
+}
+
+footer h2 {
+margin-bottom: 10px;
+}
+
+footer p {
+color: #aaa;
+
+margin-bottom: 20px;
+
+}
+
+footer small {
+color: #666;
+}
+
+/* ==============================
+CELULAR
+================================ */
+
+@media (max-width: 800px) {
+
+.hero {
+    min-height: 80vh;
+}
+.hero-content {
+    margin-top: 80px;
+}
+.hero h1 {
+    font-size: clamp(48px, 15vw, 75px);
+}
+.cards {
+    grid-template-columns: 1fr;
+}
+.card {
+    height: 450px;
+}
+.card-overlay {
     padding: 25px;
-    background: #263238;
-    color: white;
+}
+.card h3 {
+    font-size: 34px;
+}
+.section-heading {
+    align-items: start;
+    gap: 20px;
+    flex-direction: column;
+}
+
 }
