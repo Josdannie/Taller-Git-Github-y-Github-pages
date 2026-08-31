@@ -120,8 +120,9 @@ nav a:hover {
 }
 
 .hero-button:hover {
-    transform: translateY(-3px);
+    transform: translateY(-3px) scale(1.03);
     background: #21867a;
+    box-shadow: 0 10px 25px rgba(42, 157, 143, 0.35);
 }
 
 .intro {
