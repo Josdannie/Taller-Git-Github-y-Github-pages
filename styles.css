@@ -282,10 +282,15 @@ nav a:hover {
 }
 
 .location {
-    display: block;
+    display: inline-block;
     margin-top: 5px;
-    color: #eeeeee;
+    margin-bottom: 8px;
+    color: #ffffff;
     font-size: 14px;
+    background: rgba(0,0,0,0.35);
+    padding: 6px 10px;
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
 }
 
 .quote {
