@@ -16,6 +16,7 @@
     <div class="nav-links">
         <a href="#experiencia">Experiencia</a>
         <a href="#destinos">Destinos</a>
+        <a href="#contacto">Contacto</a>
     </div>
 </nav>
 
@@ -390,6 +391,74 @@
         </div>
 
     </div>
+
+</section>
+
+<section class="contacto" id="contacto">
+
+    <div class="contacto-info">
+        <p class="section-label">PLANEA TU EXPERIENCIA</p>
+        <h2>¿Listo para descubrir Colombia?</h2>
+        <p>
+            Cuéntanos qué tipo de destino te gustaría conocer
+            y comienza a imaginar tu próxima aventura.
+        </p>
+    </div>
+
+    <form class="contacto-form">
+
+        <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                placeholder="Escribe tu nombre"
+                required
+            >
+        </div>
+
+        <div class="form-group">
+            <label for="correo">Correo electrónico</label>
+            <input
+                type="email"
+                id="correo"
+                name="correo"
+                placeholder="ejemplo@correo.com"
+                required
+            >
+        </div>
+
+        <div class="form-group">
+            <label for="destino">Destino de interés</label>
+            <select id="destino" name="destino">
+                <option value="">Selecciona un destino</option>
+                <option>Guatapé</option>
+                <option>San Andrés</option>
+                <option>Cartagena</option>
+                <option>Valle del Cocora</option>
+                <option>Caño Cristales</option>
+                <option>Parque Tayrona</option>
+                <option>Villa de Leyva</option>
+                <option>Amazonas</option>
+                <option>Medellín</option>
+                <option>Barichara</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="mensaje">Mensaje</label>
+            <textarea
+                id="mensaje"
+                name="mensaje"
+                rows="5"
+                placeholder="Cuéntanos qué estás buscando..."
+            ></textarea>
+        </div>
+
+        <button type="submit">Enviar mensaje →</button>
+
+    </form>
 
 </section>
 
