@@ -352,7 +352,7 @@ footer small {
     }
 
     .card {
-        height: 450px;
+        height: 500px;
     }
 
     .card-overlay {
@@ -474,6 +474,18 @@ footer small {
     .features {
         grid-template-columns: 1fr;
     }
+
+    .card {
+    height: 520px;
+}
+
+.card h3 {
+    font-size: 30px;
+}
+
+.card p {
+    font-size: 14px;
+}
 }
 
 @keyframes aparecer {
