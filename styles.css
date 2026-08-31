@@ -382,11 +382,31 @@ footer small {
     padding: 35px 25px;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-    transition: 0.3s;
+    transition: 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.feature::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: #2a9d8f;
+    border-radius: 50%;
+    top: -50px;
+    right: -50px;
+    opacity: 0.08;
+    transition: 0.4s;
 }
 
 .feature:hover {
-    transform: translateY(-8px);
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.14);
+}
+
+.feature:hover::before {
+    transform: scale(2);
 }
 
 .feature-icon {
